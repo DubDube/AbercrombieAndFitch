@@ -1,0 +1,166 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body {
+  background: #ffffff;
+  color: #333;
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+  margin: 6.25rem auto 0;
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin-top: 1rem;
+  }
+}
+
+.container .section {
+  padding: 1.875rem 0 0.625rem;
+}
+
+.container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 1rem;
+}
+
+input[type=text] {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  height: 1.125rem;
+  padding: 0.625rem;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  border-radius: 0.375rem;
+  color: #888;
+  outline: none;
+  width: 18.75rem;
+}
+
+@media (max-width: 375px) {
+  input[type=text] {
+    width: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+input[type=text]:focus {
+  color: #333;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: #2c2929;
+  font-size: 0.9375rem;
+  width: 3.75rem;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  color: #333;
+}
+
+li {
+  overflow: hidden;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+li input[type="checkbox"] {
+  margin: 0 0.625rem;
+  position: relative;
+  top: 0.938rem;
+}
+
+li label {
+  font-size: 1.125rem;
+  line-height: 2.5rem;
+  width: 40%;
+  padding: 0 0 0 0.688rem;
+  overflow: hidden;
+}
+
+@media (max-width: 375px) {
+  li label {
+    width: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.title {
+  color: #333;
+  font-weight: 700;
+  border-bottom: 2px solid #333;
+  padding: 1.875rem 0 0.625rem;
+  margin: 0;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.edit:hover {
+  color: #0FC57C;
+}
+
+.delete:hover {
+  color: #CF2323;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+html body ul li input[type=text] {
+  display: none;
+}
+
+html body ul li.editMode input[type=text] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 39%;
+}
+
+html body ul li.editMode label {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

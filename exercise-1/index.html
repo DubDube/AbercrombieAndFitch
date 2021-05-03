@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Todo list App</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+      <link  href="css/style.css" rel="stylesheet">
+      <link  href="sass/style.scss" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="section" aria-label="add task">
+            <h2 class="title">FETCH</h2>
+            <div class="input-wrapper">
+               <button id="button" type="submit" aria-pressed="true"  aria-label="add task">Get</button>
+            </div>
+         </div>
+         <script id="entry-template" type="text/x-handlebars-template">
+            <ul class="entry">
+                   {{#each this}}
+                  <li>
+                        <p>{{this}}</p><div id="img-container"></div>
+                  </li>
+               
+                
+                  {{/each}}
+               
+             </ul>
+          </script>
+       <ul id="greetings"><div id="img-container"></div></ul>
+      </div>
+      <script type="text/javascript" src="js/app.js"></script>
+   </body>
+</html>

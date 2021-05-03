@@ -1,0 +1,133 @@
+$primary-color: #ffffff;
+ $font-color: #333;
+ $button-font-color: #2c2929;
+ $input-boder-color: #ddd;
+ $input-text-color: #888;
+ $delete-hover: #CF2323;
+ $edit-hover: #0FC57C;
+ $list-border-color: #eee;
+ $font-stack: Lato, Helvetica, sans-serif;
+ $breakpoint-phone: 375px;
+ @mixin fontsize($size: 16, $base: 16) {
+     font-size: ($size / $base) * 1rem;
+}
+ %flex-column {
+     display: flex;
+     flex-direction: column;
+}
+ html body {
+     background:$primary-color;
+     box-sizing: border-box;
+     color: $font-color;
+     font-family:$font-stack;
+     @include fontsize(16);
+}
+ .container {
+     @extend %flex-column;
+     width: 100%;
+     margin: 6.25rem auto 0;
+     @media (max-width: $breakpoint-phone) {
+         margin-top: 1rem;
+    }
+     .section {
+         padding: 1.875rem 0 0.625rem;
+    }
+     ul {
+         margin: 0;
+         padding: 0;
+    }
+     .input-wrapper {
+         display: flex;
+         align-items: center;
+         align-content: center;
+         padding-top: 1rem;
+    }
+}
+ input[type=text]{
+     margin: 0;
+     @include fontsize(18);
+     line-height: 1.125rem;
+     height: 1.125rem;
+     padding: 0.625rem;
+     border: 1px solid $input-boder-color;
+     background: $primary-color;
+     border-radius: 0.375rem;
+     color: $input-text-color;
+     outline: none;
+     width: 18.75rem;
+     @media (max-width: $breakpoint-phone) {
+         width: auto;
+         flex:1;
+    }
+     &:focus {
+         color: $font-color;
+    }
+}
+ button {
+     background: none;
+     border: 0;
+     color: $button-font-color;
+     @include fontsize(15);
+     width: 3.75rem;
+     cursor: pointer;
+     outline: none;
+     &:hover {
+         color: $font-color 
+    }
+}
+ li {
+     overflow: hidden;
+     padding: 1.25rem 0;
+     border-bottom: 1px solid $list-border-color;
+     display: flex;
+     input[type="checkbox"] {
+         margin: 0 0.625rem;
+         position: relative;
+         top: 0.938rem;
+    }
+     label {
+         @include fontsize(18);
+         line-height: 2.5rem;
+         width: 40%;
+         padding: 0 0 0 0.688rem;
+         overflow: hidden;
+         @media (max-width: $breakpoint-phone) {
+             width: auto;
+             flex:1;
+             white-space: nowrap;
+             text-overflow: ellipsis;
+        }
+    }
+}
+ .title {
+     color: $font-color;
+     font-weight: 700;
+     border-bottom: 2px solid $font-color;
+     padding: 1.875rem 0 0.625rem;
+     margin: 0;
+     text-transform: uppercase;
+     display: flex;
+     width: 100%;
+}
+ .edit:hover {
+     color: $edit-hover;
+}
+ .delete:hover {
+     color: $delete-hover;
+}
+/* Completed */
+ #completed-tasks label {
+     text-decoration: line-through;
+     color: $input-text-color;
+}
+ html body ul li input[type=text] {
+     display: none;
+}
+ html body ul li.editMode input[type=text] {
+     display: flex;
+     width: 39%;
+}
+ html body ul li.editMode label {
+     display: none;
+}
+ 
